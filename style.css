@@ -1,0 +1,129 @@
+@font-face {
+  font-family: poppins;
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: poppins-ex-bold;
+  src: url(assets/fonts/Poppins-ExtraBold.ttf);
+}
+body {
+  font-family: Poppins;
+}
+.heading {
+  display: flex;
+  align-items: center;
+}
+h1 {
+  font-family: poppins-ex-bold;
+  margin: 20px auto;
+  font-size: 2.5em;
+  color: blueviolet;
+}
+.container {
+  position: relative;
+  margin: 4vh auto;
+  background-color: beige;
+  /* height: 80vh; */
+  height: fit-content;
+  width: 50vw;
+  border-radius: 25px 25px 150px 25px;
+}
+.date-container {
+  padding: 30px 5vw;
+}
+.dates {
+  display: flex;
+  gap: 5vw;
+  color: grey;
+}
+.dates input {
+  width: 85px;
+  height: 40px;
+  font-size: large;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid silver;
+}
+.dates input:hover {
+  cursor: pointer;
+  border: 1px solid blueviolet;
+}
+.hr {
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+@media screen and (max-width: 778px) {
+  .container {
+    margin: 1vh 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    height: fit-content;
+  }
+  .hr {
+    display: block;
+    margin: 35px;
+  }
+  .hr .your-cl {
+    display: flex;
+    margin: -45px auto 0px;
+  }
+}
+
+.hr hr {
+  width: 100%;
+}
+.your-cl {
+  background: blueviolet center url("assets/images/icon-arrow.svg") no-repeat;
+  width: 70px;
+  height: 70px;
+  clip-path: circle();
+}
+.your-cl:hover {
+  background-color: black;
+  cursor: pointer;
+}
+.age-container {
+  font-size: 3.5em;
+  font-family: poppins-ex-bold;
+  font-style: italic;
+}
+error {
+  color: red;
+  font-size: smaller;
+  font-style: italic;
+}
+.button-cl {
+  text-align: center;
+}
+.button-cl button {
+  padding: 15px 25px;
+  font-size: large;
+  color: blueviolet;
+  background-color: pink;
+  font-weight: 600;
+  border-radius: 15px;
+  border: 0px;
+  transition: 0.5s ease all;
+}
+.button-cl button:hover {
+  background-color: deepskyblue;
+  font-size: 1.2em;
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, 0.2);
+}
+#year-out,
+#month-out,
+#day-out {
+  color: blueviolet;
+}
+.attribution {
+  font-size: 11px;
+  position: static;
+  bottom: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
