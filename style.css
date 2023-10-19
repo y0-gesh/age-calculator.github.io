@@ -13,7 +13,11 @@ body {
 }
 
 .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -28,6 +32,8 @@ h1 {
   position: relative;
   margin: 4vh auto;
   background-color: beige;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   max-width: 778px;
   border-radius: 25px 25px 150px 25px;
@@ -38,6 +44,8 @@ h1 {
 }
 
 .dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 5vw;
   color: grey;
@@ -65,7 +73,11 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 .hr {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 8px;
 }
@@ -75,6 +87,8 @@ input[type="number"] {
     margin-left: 10px;
     margin-right: 10px;
     width: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 
@@ -84,6 +98,8 @@ input[type="number"] {
   }
 
   .hr .your-cl {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: -45px auto 0px;
   }
@@ -97,6 +113,7 @@ input[type="number"] {
   background: blueviolet center url("assets/images/icon-arrow.svg") no-repeat;
   width: 70px;
   height: 70px;
+  -webkit-clip-path: circle();
   clip-path: circle();
 }
 
@@ -117,27 +134,6 @@ error {
   font-style: italic;
 }
 
-.button-cl {
-  text-align: center;
-}
-
-.button-cl button {
-  padding: 15px 25px;
-  font-size: large;
-  color: blueviolet;
-  background-color: pink;
-  font-weight: 600;
-  border-radius: 15px;
-  border: 0px;
-  transition: 0.5s ease all;
-}
-
-.button-cl button:hover {
-  background-color: deepskyblue;
-  font-size: 1.2em;
-  box-shadow: 4px 4px 2px 1px rgba(0, 0, 255, 0.2);
-}
-
 #year-out,
 #month-out,
 #day-out {
@@ -153,4 +149,48 @@ error {
 .attribution a {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
+}
+
+.button-cl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  row-gap: 5px;
+}
+.button {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 auto;
+  color: #120817;
+  background-color: #612a79;
+  border-radius: 0.25rem;
+}
+.button:hover span {
+  background-color: #d6b4e4;
+  cursor: pointer;
+}
+.button:active span {
+  translate: none;
+}
+.button span {
+  display: inherit;
+  border-radius: inherit;
+  border-color: #d6b4e4;
+  background-color: #c9a3d9;
+  padding: 1rem 2rem;
+  translate: 0.25rem -0.25rem;
+  border: 2px solid #612a79;
+  -webkit-transition: translate 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 250ms;
+  -o-transition: translate 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 250ms;
+  transition: translate 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 250ms;
 }

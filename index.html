@@ -1,75 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content=" Calculate your age accurately and easily with our online age calculator. Simply enter your birthdate and find out your age in years, months, and days. Quick and reliable results!" />
+    <meta
+      name="keywords"
+      content="age calculator, calculate age, online age calculator, calculate my age, how old am I, age calculator years months days" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content=" Calculate your age accurately and easily with our online age calculator. Simply enter your birthdate and find out your age in years, months, and days. Quick and reliable results!">
-  <meta name="keywords" content="age calculator, calculate age, online age calculator, calculate my age, how old am I, age calculator years months days">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Age Calculator</title>
+    <script src="index.js"></script>
+  </head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-  <link rel="stylesheet" href="style.css" />
-
-  <title>Age Calculator</title>
-  
-  <script src="index.js"></script>
-</head>
-
-<body>
-  <div class="heading">
-    <h1>Age Calculator</h1>
-  </div>
-  <div class="container">
-    <div class="date-container">
-      <div class="dates">
-        <div class="sm">
-          <label for="Day" id="day">Day</label><br />
-          <input type="number" name="day" id="day-in" onkeyup="dayfun(this)" placeholder="DD" /><br />
-          <error id="err-day"></error>
+  <body>
+    <div class="heading">
+      <h1>Age Calculator</h1>
+    </div>
+    <div class="container">
+      <div class="date-container">
+        <div class="dates">
+          <div class="sm">
+            <label for="Day" id="day">Day</label><br />
+            <input
+              type="number"
+              name="day"
+              id="day-in"
+              onkeyup="dayfun(this)"
+              placeholder="DD" /><br />
+            <error id="err-day"></error>
+          </div>
+          <div class="sm">
+            <label for="Month" id="month">Month</label><br />
+            <input
+              type="number"
+              name="month"
+              id="months-in"
+              placeholder="MM"
+              onkeyup="monthfun(this)" /><br />
+            <error id="err-month"></error>
+          </div>
+          <div class="sm">
+            <label for="Year" id="year">Year</label><br />
+            <input
+              type="number"
+              name="year"
+              id="year-in"
+              onkeyup="yearfun(this)"
+              placeholder="YYYY" /><br />
+            <error id="err-year"></error>
+          </div>
         </div>
-        <div class="sm">
-          <label for="Month" id="month">Month</label><br />
-          <input type="number" name="month" id="months-in" placeholder="MM" onkeyup="monthfun(this)" /><br />
-          <error id="err-month"></error>
+        <br />
+        <!-- Horizontal Line -->
+        <div class="hr">
+          <hr style="height: 1px; border-width: 0; background-color: silver" />
+          <div
+            class="your-cl"
+            type="submit"
+            value="SUBMIT"
+            id="button-id"
+            onclick="calcAge()"></div>
         </div>
-        <div class="sm">
-          <label for="Year" id="year">Year</label><br />
-          <input type="number" name="year" id="year-in" onkeyup="yearfun(this)" placeholder="YYYY" /><br />
-          <error id="err-year"></error>
+
+        <div class="button-cl">
+          <a onclick="calcAge()" class="button">
+            <span>Calculate</span>
+          </a>
+          <error id="err-catch"></error>
         </div>
-      </div>
-      <br />
-      <!-- Horizontal Line -->
-      <div class="hr">
-        <hr style="height: 1px; border-width: 0; background-color: silver" />
-        <div class="your-cl" type="submit" value="SUBMIT" id="button-id" onclick="calcAge()"></div>
-      </div>
-      <div class="button-cl">
-        <button type="submit" value="SUBMIT" id="button-id" onclick="calcAge()">
-          Calculate</button><br />
-        <error id="err-catch"></error>
-      </div>
 
-      <!-- Age -->
-      <div class="age-container">
-        <span id="year-out">--</span>
-        <span for="year">years</span><br />
+        <!-- Age -->
+        <div class="age-container">
+          <span id="year-out">--</span>
+          <span for="year">years</span><br />
 
-        <span id="month-out">--</span>
-        <span for="day">months</span><br />
+          <span id="month-out">--</span>
+          <span for="day">months</span><br />
 
-        <span id="day-out">--</span>
-        <span for="day">days</span><br />
+          <span id="day-out">--</span>
+          <span for="day">days</span><br />
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="attribution">
-    <div class="contact">
-      Coded by
-      <a href="https://www.linkedin.com/in/yogesh-tandan-48214922a" target="_blank">Yogesh Tandan</a>
+    <div class="attribution">
+      <div class="contact">
+        Coded by
+        <a
+          href="https://www.linkedin.com/in/yogesh-tandan-48214922a"
+          target="_blank"
+          >Yogesh Tandan</a
+        >
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
